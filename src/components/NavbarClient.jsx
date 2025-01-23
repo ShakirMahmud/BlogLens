@@ -1,12 +1,12 @@
-"use client"; 
+"use client";
 
-import { useState } from "react"; 
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const NavbarClient = ({ user, logoutLink }) => {
     const pathname = usePathname();
-    const [isMenuOpen, setIsMenuOpen] = useState(false); 
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
@@ -54,47 +54,43 @@ const NavbarClient = ({ user, logoutLink }) => {
                     <div className="hidden md:flex items-center space-x-4">
                         <Link
                             href="/"
-                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                pathname === "/" ? "border-b-2 border-white rounded-none" : ""
-                            }`}
+                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/" ? "border-b-2 border-white rounded-none" : ""
+                                }`}
                         >
                             Home
                         </Link>
                         <Link
                             href="/all-posts"
-                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                pathname === "/all-posts" ? "border-b-2 border-white rounded-none" : ""
-                            }`}
+                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/all-posts" ? "border-b-2 border-white rounded-none" : ""
+                                }`}
                         >
                             All Posts
                         </Link>
+                        <Link
+                            href="/my-profile"
+                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/my-profile" ? "border-b-2 border-white rounded-none" : ""
+                                }`}
+                        >
+                            My Profile
+                        </Link>
                         {user ? (
                             <>
-                                <Link
-                                    href="/my-profile"
-                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                        pathname === "/my-profile" ? "border-b-2 border-white rounded-none" : ""
-                                    }`}
-                                >
-                                    My Profile
-                                </Link>
+
                                 {logoutLink}
                             </>
                         ) : (
                             <>
                                 <Link
                                     href="/api/auth/login"
-                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                        pathname === "/api/auth/login" ? "border-b-2 border-white rounded-none" : ""
-                                    }`}
+                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/api/auth/login" ? "border-b-2 border-white rounded-none" : ""
+                                        }`}
                                 >
                                     Sign In
                                 </Link>
                                 <Link
                                     href="/api/auth/register"
-                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                        pathname === "/api/auth/register" ? "border-b-2 border-white rounded-none" : ""
-                                    }`}
+                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/api/auth/register" ? "border-b-2 border-white rounded-none" : ""
+                                        }`}
                                 >
                                     Sign Up
                                 </Link>
@@ -109,47 +105,42 @@ const NavbarClient = ({ user, logoutLink }) => {
                         <div className="flex flex-col space-y-2 mt-4">
                             <Link
                                 href="/"
-                                className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                    pathname === "/" ? "border-b-2 border-white rounded-none" : ""
-                                }`}
+                                className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/" ? "border-b-2 border-white rounded-none" : ""
+                                    }`}
                             >
                                 Home
                             </Link>
                             <Link
                                 href="/all-posts"
-                                className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                    pathname === "/all-posts" ? "border-b-2 border-white rounded-none" : ""
-                                }`}
+                                className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/all-posts" ? "border-b-2 border-white rounded-none" : ""
+                                    }`}
                             >
                                 All Posts
                             </Link>
+                            <Link
+                                href="/my-profile"
+                                className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/my-profile" ? "border-b-2 border-white rounded-none" : ""
+                                    }`}
+                            >
+                                My Profile
+                            </Link>
                             {user ? (
                                 <>
-                                    <Link
-                                        href="/my-profile"
-                                        className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                            pathname === "/my-profile" ? "border-b-2 border-white rounded-none" : ""
-                                        }`}
-                                    >
-                                        My Profile
-                                    </Link>
                                     {logoutLink}
                                 </>
                             ) : (
                                 <>
                                     <Link
                                         href="/api/auth/login"
-                                        className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                            pathname === "/api/auth/login" ? "border-b-2 border-white rounded-none" : ""
-                                        }`}
+                                        className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/api/auth/login" ? "border-b-2 border-white rounded-none" : ""
+                                            }`}
                                     >
                                         Sign In
                                     </Link>
                                     <Link
                                         href="/api/auth/register"
-                                        className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
-                                            pathname === "/api/auth/register" ? "border-b-2 border-white rounded-none" : ""
-                                        }`}
+                                        className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${pathname === "/api/auth/register" ? "border-b-2 border-white rounded-none" : ""
+                                            }`}
                                     >
                                         Sign Up
                                     </Link>
