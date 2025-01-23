@@ -1,9 +1,10 @@
-import { getKindeServerSession, LogoutLink } from "@kinde-oss/kinde-auth-nextjs/server";
+"use client";
+
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 
-const Navbar = async ({ pathname }) => {
-    const { getUser } = getKindeServerSession();
-    const user = await getUser();
+const NavbarClient = ({ user, logoutLink }) => {
+    const pathname = usePathname();
 
     return (
         <nav className="sticky top-0 z-50 bg-gray-800 shadow-lg">
@@ -40,9 +41,7 @@ const Navbar = async ({ pathname }) => {
                                 >
                                     My Profile
                                 </Link>
-                                <LogoutLink className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors">
-                                    Sign out
-                                </LogoutLink>
+                                {logoutLink}
                             </>
                         ) : (
                             <>
@@ -71,4 +70,4 @@ const Navbar = async ({ pathname }) => {
     );
 };
 
-export default Navbar;
+export default NavbarClient;

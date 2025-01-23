@@ -1,10 +1,11 @@
 import Footer from "@/components/Footer";
-import NavbarPathName from "@/components/NavbarPathName";
+import NavbarServer from "@/components/NavbarServer";
+
 
 export default function HomeLayout({ children }) {
   return (
     <section className="min-h-screen">
-      <NavbarPathName />
+      <NavbarServer />
       <section className="min-h-[70vh]">{children}</section>
       <Footer/>
     </section>
