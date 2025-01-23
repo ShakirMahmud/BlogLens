@@ -5,7 +5,7 @@ import {
 
 const MyProfile = async () => {
   const { getUser, isAuthenticated } = getKindeServerSession();
-  if (!getUser() || !(await isAuthenticated())) {
+  if (!(await getUser()) || !(await isAuthenticated())) {
     redirect("/api/auth/login");
   }
   const user = await getUser();
