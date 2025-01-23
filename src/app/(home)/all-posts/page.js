@@ -4,7 +4,7 @@ import Link from "next/link";
 const AllPosts = async ({ searchParams }) => {
     const page = parseInt(searchParams.page) || 1;
     const limit = 9;
-    const totalPosts = 100; 
+    const totalPosts = 100;
     const totalPages = Math.ceil(totalPosts / limit);
 
     const res = await fetch(
@@ -21,7 +21,9 @@ const AllPosts = async ({ searchParams }) => {
                 ))}
             </div>
 
-            <div className="flex justify-center mt-8 space-x-4">
+            {/* Pagination */}
+            <div className="flex flex-col items-center justify-center mt-8 space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
+                {/* Previous Button */}
                 <Link
                     href={`/all-posts?page=${page - 1}`}
                     className={`px-4 py-2 bg-blue-600 text-white rounded-lg ${
@@ -30,7 +32,9 @@ const AllPosts = async ({ searchParams }) => {
                 >
                     Previous
                 </Link>
-                <div className="flex space-x-2">
+
+                {/* Page Numbers */}
+                <div className="flex flex-wrap justify-center gap-2">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
                         <Link
                             key={pageNumber}
@@ -45,6 +49,8 @@ const AllPosts = async ({ searchParams }) => {
                         </Link>
                     ))}
                 </div>
+
+                {/* Next Button */}
                 <Link
                     href={`/all-posts?page=${page + 1}`}
                     className={`px-4 py-2 bg-blue-600 text-white rounded-lg ${

@@ -9,8 +9,8 @@ const MyProfile = async () => {
     const user = await getUser();
 
     return (
-        <div className="min-h-[70vh] bg-gray-100 flex items-center justify-center">
-            <div className="bg-white p-8 py-24 rounded-lg shadow-md text-center container mx-auto ">
+        <div className="min-h-[70vh] bg-gray-100 flex items-center justify-center ">
+            <div className="bg-white p-8 py-24 rounded-lg shadow-md text-center w-11/12 lg:w-3/5 mx-auto ">
                 <h1 className="text-3xl font-bold text-gray-900 mb-4">
                     Welcome,{" "}
                     <span className="text-blue-600">
