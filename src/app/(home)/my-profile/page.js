@@ -3,7 +3,7 @@ import { getKindeServerSession, LoginLink } from "@kinde-oss/kinde-auth-nextjs/s
 
 const MyProfile = async () => {
     const { isAuthenticated, getUser } = getKindeServerSession();
-    if (!(await isAuthenticated())) {
+    if (!(await isAuthenticated()) || !getUser()) {
         redirect("/api/auth/login");
     }
     const user = await getUser();
