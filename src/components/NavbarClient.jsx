@@ -17,7 +17,7 @@ const NavbarClient = ({ user, logoutLink }) => {
                     <div className="flex items-center space-x-4">
                         <Link
                             href="/"
-                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                            className={`text-gray-300 hover:text-white  py-2 rounded-md text-sm font-medium transition-colors ${
                                 pathname === "/" ? "border-b-2 border-white rounded-none" : ""
                             }`}
                         >
@@ -25,7 +25,7 @@ const NavbarClient = ({ user, logoutLink }) => {
                         </Link>
                         <Link
                             href="/all-posts"
-                            className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                            className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
                                 pathname === "/all-posts" ? "border-b-2 border-white rounded-none" : ""
                             }`}
                         >
@@ -35,7 +35,7 @@ const NavbarClient = ({ user, logoutLink }) => {
                             <>
                                 <Link
                                     href="/my-profile"
-                                    className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
                                         pathname === "/my-profile" ? "border-b-2 border-white rounded-none" : ""
                                     }`}
                                 >
@@ -47,7 +47,7 @@ const NavbarClient = ({ user, logoutLink }) => {
                             <>
                                 <Link
                                     href="/api/auth/login"
-                                    className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
                                         pathname === "/api/auth/login" ? "border-b-2 border-white rounded-none" : ""
                                     }`}
                                 >
@@ -55,7 +55,7 @@ const NavbarClient = ({ user, logoutLink }) => {
                                 </Link>
                                 <Link
                                     href="/api/auth/register"
-                                    className={`text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                                    className={`text-gray-300 hover:text-white py-2 rounded-md text-sm font-medium transition-colors ${
                                         pathname === "/api/auth/register" ? "border-b-2 border-white rounded-none" : ""
                                     }`}
                                 >
