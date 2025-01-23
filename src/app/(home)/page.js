@@ -1,8 +1,9 @@
+import HomePostSection from "@/components/HomePostSection";
 
 const HomePage = () => {
   return (
     <div>
-      Home
+      <HomePostSection/>
     </div>
   );
 };
