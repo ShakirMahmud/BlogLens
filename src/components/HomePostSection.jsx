@@ -7,7 +7,6 @@ const HomePostSection = async () => {
 
     return (
         <div className="container mx-auto px-4 py-12">
-            {/* Title and Subtitle */}
             <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-gray-900 mb-4">Latest Blog Posts</h2>
                 <p className="text-lg text-gray-600">
@@ -15,14 +14,11 @@ const HomePostSection = async () => {
                 </p>
             </div>
 
-            {/* Posts Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {posts.slice(0, 6).map((post) => (
                     <PostsCards key={post.id} post={post} />
                 ))}
             </div>
-
-            {/* View All Posts Button */}
             <div className="text-center mt-8">
                 <Link
                     href="/all-posts"

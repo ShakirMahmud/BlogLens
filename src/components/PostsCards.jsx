@@ -3,15 +3,13 @@ import Link from "next/link";
 const PostsCards = ({ post }) => {
     return (
         <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-            {/* Card Content */}
             <div className="p-6 flex-1">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{post.title}</h3>
                 <p className="text-gray-600">
-                    {post.body.substring(0, 100)}... {/* Display a short excerpt */}
+                    {post.body.substring(0, 100)}...
                 </p>
             </div>
-
-            {/* View Details Button */}
+            
             <div className="p-6">
                 <Link
                     href={`/blog/${post.id}`}

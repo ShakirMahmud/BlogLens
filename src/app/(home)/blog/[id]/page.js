@@ -8,7 +8,6 @@ const SinglePost = async ({ params }) => {
 
     return (
         <div className="container mx-auto px-4 py-12 min-h-[70vh] flex flex-col justify-center ">
-            {/* Back Button */}
             <div className="mb-8">
                 <Link
                     href='/'
@@ -31,11 +30,8 @@ const SinglePost = async ({ params }) => {
                     Back to Home
                 </Link>
             </div>
-
-            {/* Post Title */}
             <h1 className="text-4xl font-bold text-gray-900 mb-6">{post.title}</h1>
-
-            {/* Post Body */}
+            
             <div className="prose max-w-3xl mx-auto">
                 <p className="text-gray-700">{post.body}</p>
             </div>
